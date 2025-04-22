@@ -39,13 +39,14 @@ export const ChaptersProvider: React.FC<{ children: React.ReactNode }> = ({
         const chapter1 = await import('../data/chapters/chapter-1.md?raw');
         const chapter2 = await import('../data/chapters/chapter-2.md?raw');
         const chapter3 = await import('../data/chapters/chapter-3.md?raw');
-
+        const chapter4 = await import('../data/chapters/chapter-4.md?raw');
+        const chapter5 = await import('../data/chapters/chapter-5.md?raw');
         const parsedChapters = [
           parseMarkdown(chapter1.default, 'chapter-1'),
           parseMarkdown(chapter2.default, 'chapter-2'),
           parseMarkdown(chapter3.default, 'chapter-3'),
-          parseMarkdown(chapter3.default, 'chapter-4'),
-          parseMarkdown(chapter3.default, 'chapter-5'),
+          parseMarkdown(chapter4.default, 'chapter-4'),
+          parseMarkdown(chapter5.default, 'chapter-5'),
         ];
 
         // Mark the first chapter as completed for demo purposes
